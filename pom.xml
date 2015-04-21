@@ -4,15 +4,13 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.demo</groupId>
-	<artifactId>springmvc</artifactId>
+	<artifactId>spring-jboss</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>Spring Web Demo</name>
+	<name>Spring JBoss Demo</name>
 
 	<properties>
-
-		<basedir>C:/Users/rohit.bansal/git/spring-jboss-demo</basedir>
 
 		<skipTests>true</skipTests>
 
