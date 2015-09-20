@@ -25,20 +25,20 @@
 	</bean>
 
 	<!-- JBoss Configuration -->
-	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:jboss/datasources/jdbc/springmvcDS" />
-		<property name="resourceRef" value="true" />
-		<property name="lookupOnStartup" value="true" />
-		<property name="proxyInterface" value="javax.sql.DataSource" />
-	</bean> -->
-	
-	<!-- Tomcat Configuration -->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="jdbc/mysqlDS" />
+		<property name="jndiName" value="java:jboss/datasources/mysqlDS" />
 		<property name="resourceRef" value="true" />
 		<property name="lookupOnStartup" value="true" />
 		<property name="proxyInterface" value="javax.sql.DataSource" />
 	</bean>
+	
+	<!-- Tomcat Configuration -->
+	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="jdbc/mysqlDS" />
+		<property name="resourceRef" value="true" />
+		<property name="lookupOnStartup" value="true" />
+		<property name="proxyInterface" value="javax.sql.DataSource" />
+	</bean> -->
 
 	<!-- Configure the JPA entity manager factory with Hibernate -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

@@ -36,13 +36,13 @@
 				3.0.0.Final which is the latest release of the stack. You can actually use 
 				this stack with any version of JBoss AS that implements Java EE 6, not just 
 				JBoss AS 7! -->
-			<!-- <dependency>
+			<dependency>
 				<groupId>org.jboss.spec</groupId>
 				<artifactId>jboss-javaee-web-6.0</artifactId>
 				<version>3.0.0.Final</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency> -->
+			</dependency>
 
 			<!-- Spring dependencies -->
 			<dependency>
@@ -181,18 +181,16 @@
 		</dependency>
 		
 		<!-- Import the JPA API using the provided scope It is included in JBoss  AS 7 / EAP 6 -->
-		<!-- 
 		<dependency> 
 			<groupId>org.hibernate.javax.persistence</groupId> 
 			<artifactId>hibernate-jpa-2.0-api</artifactId> 
 			<scope>provided</scope> 
 		</dependency> 
-		-->
+		
 		
 		<!-- JSR-303 (Bean Validation) Implementation -->
 		<!-- Provides portable constraints such as @Email -->
 		<!-- Hibernate Validator is shipped in JBoss AS 7 -->
-		<!-- 
 		<dependency> <groupId>org.hibernate</groupId> 
 			<artifactId>hibernate-validator</artifactId> 
 			<version>${hibernate.version}</version> 
@@ -203,10 +201,10 @@
 					<artifactId>slf4j-api</artifactId> 
 				</exclusion> 
 			</exclusions> 
-		</dependency> -->
+		</dependency>
 
 		<!-- For Tomcat Configuration -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>${hibernate.version}</version>
@@ -217,11 +215,10 @@
 					<artifactId>slf4j-api</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 
 		<!-- Annotation processor that raising compilation errors whenever constraint 
 				annotations are incorrectly used. -->
-		<!-- 
 		<dependency> 
 			<groupId>org.hibernate</groupId> 
 			<artifactId>hibernate-validator-annotation-processor</artifactId> 
@@ -233,22 +230,21 @@
 			<artifactId>hibernate-entitymanager</artifactId> 
 			<version>${hibernate.version}</version> 
 			<scope>provided</scope> 
-		</dependency> -->
+		</dependency>
 
 		<!-- For Tomcat Configuration -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator-annotation-processor</artifactId>
 			<version>${hibernate.version}</version>
 			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
 			<scope>compile</scope>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>jstl</groupId>
@@ -357,7 +353,6 @@
 
 		<!-- Begin: Add JSON dependency, specified in jboss-deployment-structure.xml -->
 		<!-- Add H2 dependency for embedded testing database -->
-		<!-- 
 		<dependency> 
 			<groupId>com.h2database</groupId> 
 			<artifactId>h2</artifactId> 
@@ -381,11 +376,11 @@
 			<artifactId>slf4j-simple</artifactId> 
 			<version>1.6.4</version> 
 			<scope>provided</scope> 
-		</dependency> -->
+		</dependency>
 		<!-- End: Add JSON dependency, specified in jboss-deployment-structure.xml -->
 
 		<!-- Tomcat configuration -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.3</version>
@@ -396,7 +391,8 @@
 			<artifactId>jackson-core-asl</artifactId>
 			<version>1.9.3</version>
 			<scope>compile</scope>
-		</dependency>
+		</dependency> -->
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
