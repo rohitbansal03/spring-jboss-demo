@@ -15,13 +15,13 @@ import com.demo.springmvc.repo.MemberDao;
 @ContextConfiguration(locations = { "classpath:test-context.xml" })
 @Transactional
 public class MemberDaoTest {
-	
+
 	@Autowired
 	private MemberDao memberDao;
-	
+
 	@Test
 	public void testRegister() {
-		
+
 		Member member = new Member();
 		member.setEmail("jane.doe@mailinator.com");
 		member.setName("Jane Doe");

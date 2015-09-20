@@ -9,13 +9,13 @@ import com.demo.springmvc.domain.Member;
  *
  */
 public interface MemberDao {
-	
-    public Member findById(Long id);
 
-    public Member findByEmail(String email);
+	public Member findById(Long id);
 
-    public List<Member> findAllOrderedByName();
+	public Member findByEmail(String email);
 
-    public void register(Member member);
-    
+	public List<Member> findAllOrderedByName();
+
+	public void register(Member member);
+
 }

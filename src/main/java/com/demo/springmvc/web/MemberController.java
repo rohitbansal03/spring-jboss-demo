@@ -24,10 +24,9 @@ public class MemberController {
     @Autowired
     private MemberDao memberDao;
     
-
     @RequestMapping(method=RequestMethod.GET)
     public String displaySortedMembers(Model model) {
-
+    	
     	model.addAttribute("newMember", new Member());
         model.addAttribute("members", memberDao.findAllOrderedByName());
         return "index";
@@ -38,7 +37,6 @@ public class MemberController {
     		BindingResult result, Model model) {
     	
     	logger.info("Request for registering new member ...");
-    	
         if (!result.hasErrors()) {
             memberDao.register(newMember);
             return "redirect:/";
