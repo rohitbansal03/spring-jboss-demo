@@ -8,13 +8,14 @@
 		<class>com.demo.springmvc.domain.Member</class>
 	
 		<properties>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
-			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.use_sql_comments" value="false" />
 			<property name="hibernate.connection.autocommit" value="false" />
 			<property name="hibernate.cache.use_query_cache" value="false" />
 			<property name="hibernate.cache.use_second_level_cache" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 		
 	</persistence-unit>

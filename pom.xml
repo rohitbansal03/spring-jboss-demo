@@ -168,10 +168,15 @@
 				<artifactId>c3p0</artifactId>
 				<version>0.9.1.2</version>
 			</dependency>
-			<dependency>
+			<!-- <dependency>
 				<groupId>com.oracle</groupId>
 				<artifactId>ojdbc14</artifactId>
 				<version>10.2.0.4.0</version>
+			</dependency> -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.6</version>
 			</dependency>
 			<dependency>
 				<groupId>javax.servlet</groupId>
@@ -184,6 +189,11 @@
 	</dependencyManagement>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 
 		<!-- Import the JPA API using the provided scope It is included in JBoss 
 			AS 7 / EAP 6 -->
@@ -401,18 +411,18 @@
 	<build>
 		<finalName>springmvc</finalName>
 		<plugins>
-			<!-- Force Java 6 -->
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 
-			<!-- Deployent on AS from console -->
+			<!-- Deployment on AS from console -->
 			<!-- <plugin> <groupId>org.jboss.as.plugins</groupId> <artifactId>jboss-as-maven-plugin</artifactId> 
 				<version>${version.jboss.as.maven.plugin}</version> </plugin> -->
 
@@ -427,12 +437,10 @@
 					</additionalClasspathElements>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
 	<profiles>
-
 		<profile>
 			<!-- When built in OpenShift the 'openshift' profile will be used when 
 				invoking mvn. -->

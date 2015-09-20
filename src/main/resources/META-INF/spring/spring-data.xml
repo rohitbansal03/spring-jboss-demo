@@ -34,7 +34,7 @@
 	
 	<!-- Tomcat Configuration -->
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="jdbc/springmvcDS" />
+		<property name="jndiName" value="jdbc/mysqlDS" />
 		<property name="resourceRef" value="true" />
 		<property name="lookupOnStartup" value="true" />
 		<property name="proxyInterface" value="javax.sql.DataSource" />
@@ -46,7 +46,7 @@
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="showSql" value="false" />
-				<property name="database" value="ORACLE" />
+				<property name="database" value="MYSQL" />
 			</bean>
 		</property>
 		<property name="persistenceUnitName" value="springmvc-persistence" />

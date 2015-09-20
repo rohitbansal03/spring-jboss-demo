@@ -24,11 +24,18 @@
 
 	<!-- <jdbc:embedded-database id="dataSource" type="H2"/> -->
 	
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
 		<property name="username" value="springdemo" />
 		<property name="password" value="springdemo" />
+	</bean> -->
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://web.vagrant.com:3306/springmvc" />
+		<property name="username" value="dbrfroot" />
+		<property name="password" value="ms01atrf" />
 	</bean>
 	
 	<!-- DAOs mapping that needs to be tested -->
